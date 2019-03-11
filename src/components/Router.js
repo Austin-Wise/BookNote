@@ -1,15 +1,15 @@
 import React from "react";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
+import { HashRouter, Route, Switch } from "react-router-dom";
 import App from "../pages/app/App";
-import NotFound from "./NotFound";
+import NotFound from "../pages/notfound/NotFound";
 
 const Router = () => (
-    <BrowserRouter>
+    <HashRouter>
         <Switch>
             <Route exact path="/" component={App} />
             <Route component={NotFound} />
         </Switch>
-    </BrowserRouter>
+    </HashRouter>
 );
 
 export default Router;
