@@ -16,6 +16,7 @@ class App extends React.Component {
     super(props);
     this.state = {
       book: [],
+      selectedBook: null
     }
     this.search("Storm");
   }
@@ -31,15 +32,17 @@ class App extends React.Component {
   }
 
   render() {
-    const bookSearch = _.debounce((term) => { this.search(term) }, 300)
+    const bookSearch = _.debounce((term) => { this.search(term) }, 500)
     return (
       <div className="App">
         <SearchBar onSearchTermChange={bookSearch} />
         <div className="container-fluid">
           <div className="row text-center">
-            <BookList books={this.state.book} />
+            <BookList books={this.state.book}
+              onBookSelect={selectedBook => this.setState({ selectedBook })} />
           </div>
         </div>
+        <BookDetail book={this.state.selectedBook} />
       </div >
     );
   }
