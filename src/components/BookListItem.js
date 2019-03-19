@@ -1,7 +1,7 @@
 import React from 'react';
 
 const BookListItem = ({ book, key, onBookSelect }) => {
-    const imgUrl = book.volumeInfo.imageLinks.thumbnail;
+    const imgUrl = (book.volumeInfo.imageLinks) ? book.volumeInfo.imageLinks.thumbnail : false;
     return (
 
         <div className="col-xs-6 col-md-2 col-lg-2 col-sm-2 bit " key={key} onClick={() => onBookSelect(book)}>

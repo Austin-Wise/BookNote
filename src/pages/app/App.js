@@ -3,6 +3,7 @@ import React from 'react';
 import Axios from 'axios';
 import SearchBar from "../../components/SearchBar";
 import BookList from "../../components/BookList";
+import BookDetail from "../../components/BookDetail";
 import './Style.css';
 
 const urlForBook = 'https://www.googleapis.com/books/v1/volumes?q=';
@@ -27,12 +28,14 @@ class App extends React.Component {
         const book = res.data.items;
         console.log(book);
         this.setState({ book });
+      }).catch(error => {
+        console.log(error)
       })
 
   }
 
   render() {
-    const bookSearch = _.debounce((term) => { this.search(term) }, 500)
+    const bookSearch = _.debounce((term) => { this.search(term) }, 1000)
     return (
       <div className="App">
         <SearchBar onSearchTermChange={bookSearch} />
