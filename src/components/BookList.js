@@ -1,8 +1,7 @@
 import React from 'react';
-import BookListItem from './BookListItem';
+import BookListItem from './bookListItem/BookListItem';
 
 const BookList = (props) => {
-
     const articles = props.books.map((book) => {
         return <BookListItem
             onBookSelect={props.onBookSelect}
@@ -10,10 +9,10 @@ const BookList = (props) => {
             book={book} />
     })
     return (
-        <div className="m-5 d-flex flex-wrap">
-
-            {articles}
-
+        <div className="body-container">
+            <div className="article-container">
+                {articles}
+            </div>
         </div>
     )
 }

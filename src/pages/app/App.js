@@ -13,42 +13,67 @@ const bookKey = '&key=AIzaSyDvTrjRMZ6tgY_o1oUtEC4KhQUtDdjsLwA';
 
 class App extends React.Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      book: [],
-      selectedBook: null
-    }
-    this.search("Storm");
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     book: [],
+  //     selectedBook: null,
+  //     isLoaded: true
+  //   }
+  //   this.search("Potter");
+  // }
+
+  state = {
+    book: [],
+    selectedBook: null,
+    isLoaded: true
   }
 
   search(term) {
+    this.setState({ isLoaded: false });
     Axios.get(urlForBook + term + bookKey)
       .then(res => {
-        const book = res.data.items;
+        const book = (res.data.items && res.data.items.length) ? res.data.items : [];
         console.log(book);
         this.setState({ book });
-      }).catch(error => {
+        this.setState({ isLoaded: true });
+      })
+      .catch(error => {
         console.log(error)
       })
-
   }
+
 
   render() {
     const bookSearch = _.debounce((term) => { this.search(term) }, 1000)
-    return (
-      <div className="App">
-        <SearchBar onSearchTermChange={bookSearch} />
-        <div className="container-fluid">
-          <div className="row text-center">
-            <BookList books={this.state.book}
-              onBookSelect={selectedBook => this.setState({ selectedBook })} />
+    if (this.state.isLoaded) {
+      return (
+        <div className="App">
+          <header>
+            <SearchBar onSearchTermChange={bookSearch} />
+          </header>
+          <div className="container">
+            <div className="">
+              <BookList books={this.state.book}
+                onBookSelect={selectedBook => this.setState({ selectedBook })} />
+            </div>
           </div>
-        </div>
-        <BookDetail book={this.state.selectedBook} />
-      </div >
-    );
+          <BookDetail book={this.state.selectedBook} />
+        </div >
+      );
+    } else {
+      return (
+        <div className="App">
+          <SearchBar onSearchTermChange={bookSearch} />
+          <div>
+            <div>
+              <h2>Loading...</h2>
+            </div>
+          </div>
+        </div >
+      );
+    }
   }
-
 }
+
 export default App;

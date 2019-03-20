@@ -1,0 +1,26 @@
+h1,h2,h3,h4,h5,p, .App{
+    margin: 0;
+    padding: 0;
+}
+body{
+    box-sizing: border-box;
+}
+.body-container{
+    padding-top: 3rem;
+}
+.article-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+}
+header{
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+#searchbar{
+    padding: .2rem;
+    width: 25%;
+    max-width: 250px;
+    min-width: 150px;
+}
