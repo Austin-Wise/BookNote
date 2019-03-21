@@ -50,10 +50,10 @@ class App extends React.Component {
       return (
         <div className="App">
           <SearchBar onSearchTermChange={bookSearch} />
-          <div>
-            <div>
-              <h2>Loading...</h2>
-            </div>
+          <div className="appLoading">
+
+            <h2>Loading...</h2>
+
           </div>
         </div >
       );

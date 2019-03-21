@@ -18,12 +18,12 @@ const BookDetail = ({ book, onBookSelect }) => {
                 <div className="detail-body">
                     <h4 className="detail-author">{book.volumeInfo.authors ? book.volumeInfo.authors : "[No Author Data]"}</h4>
                     <p className="detail-category">{book.volumeInfo.categories ? book.volumeInfo.categories : "[No Category Data]"}</p>
-                    <p className="detail-pages">{book.volumeInfo.pageCount ? book.volumeInfo.pageCount : "[No Page Count Data]"} Pages</p>
-                    <p className="detail-publisher">Publisher: {book.volumeInfo.publisher}, {book.volumeInfo.publishedDate}</p>
+                    <p className="detail-pages">{book.volumeInfo.pageCount ? book.volumeInfo.pageCount + " Pages" : "[No Page Count Data]"}</p>
+                    <p className="detail-publisher">{(book.volumeInfo.publisher && book.volumeInfo.publishedDate) ? "Publisher: " + book.volumeInfo.publisher + ", " + book.volumeInfo.publishedDate : "[No Publisher Data]"}</p>
                     <p className="detail-description">{book.volumeInfo.description ? book.volumeInfo.description : "[No Author Data]"}</p>
                 </div>
                 <div className="detail-options">
-                    <a className="button-google" href={book.volumeInfo.previewLink} target="_blank">View in Books</a>
+                    {book.volumeInfo.previewLink ? (<a className="button-google" href={book.volumeInfo.previewLink} target="_blank">View in Books</a>) : ""}
                     <button className="button-exit" onClick={() => onBookSelect(null)}>Done</button>
                 </div >
             </div>
