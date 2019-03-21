@@ -1,27 +1,40 @@
 .card{
     width: 350px;
-    min-height: 250px;
-    border: 1px solid black;
+    height: 280px;
+    border: 3px solid #2A5D73;
+    background: #fff;
 }
 .card-head{
     height: 140px;
     width: 100%;
     background: #2A5D73;
-    display: flex;
+    display: grid;
+    grid-template-rows: 6fr 1fr;
 }
-.card-head > h2{
-align-self: flex-end;
+.card-head > h3{
+align-self: end;
 font-size: 1.4rem;
 padding: 3rem 2rem .2rem .5rem;
 color: #fff;
 }
+.card-head > h4{
+    align-self: end;
+    font-size: 1rem;
+    padding-left:.5rem;
+    padding-bottom: .2rem;
+}
 .card-content{
     padding: 8px;
-}
-.card-content > h3{
-    margin-top: 0;
-    font-size: 1.1rem;
+    display: grid;
+    grid-template-rows: 6fr 1fr;
+    height: 125px;
+
 }
 .card-content > p{
     font-size: 1rem;
+}
+
+.card-content > button{
+    align-self: end;
+    width: 40%;
 }

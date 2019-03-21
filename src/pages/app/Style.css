@@ -4,11 +4,12 @@ h1,h2,h3,h4,h5,p, .App{
 }
 body{
     box-sizing: border-box;
+    background-color: rgb(235, 235, 235);
 }
 .body-container{
     padding-top: 3rem;
 }
-.article-container{
+.container{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 2rem;
@@ -17,10 +18,21 @@ header{
     width: 100%;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
 }
 #searchbar{
-    padding: .2rem;
+    padding: .4rem;
     width: 25%;
     max-width: 250px;
     min-width: 150px;
+    
+    
+}
+#logo{
+    background: url("./booknote_logo.png") no-repeat;
+    background-size: 100%;
+    color: rgba(0, 0, 0, 0);
 }

@@ -3,7 +3,7 @@ import React from 'react';
 import Axios from 'axios';
 import SearchBar from "../../components/SearchBar";
 import BookList from "../../components/BookList";
-import BookDetail from "../../components/BookDetail";
+
 import './Style.css';
 
 const urlForBook = 'https://www.googleapis.com/books/v1/volumes?q=';
@@ -13,20 +13,10 @@ const bookKey = '&key=AIzaSyDvTrjRMZ6tgY_o1oUtEC4KhQUtDdjsLwA';
 
 class App extends React.Component {
 
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-  //     book: [],
-  //     selectedBook: null,
-  //     isLoaded: true
-  //   }
-  //   this.search("Potter");
-  // }
-
   state = {
     book: [],
-    selectedBook: null,
-    isLoaded: true
+    isLoaded: true,
+    term: ""
   }
 
   search(term) {
@@ -51,14 +41,13 @@ class App extends React.Component {
         <div className="App">
           <header>
             <SearchBar onSearchTermChange={bookSearch} />
+            <h1 id="logo">BookNote</h1>
           </header>
           <div className="container">
             <div className="">
-              <BookList books={this.state.book}
-                onBookSelect={selectedBook => this.setState({ selectedBook })} />
+              <BookList books={this.state.book} />
             </div>
           </div>
-          <BookDetail book={this.state.selectedBook} />
         </div >
       );
     } else {

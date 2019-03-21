@@ -1,4 +1,5 @@
 import React from 'react';
+import './Style.css';
 
 const BookDetail = ({ book }) => {
 
@@ -11,10 +12,10 @@ const BookDetail = ({ book }) => {
         <div className="book-detail">
 
             <div className="details">
-                <div>
+                <div className="detailHead">
                     {book.volumeInfo.title}
                 </div>
-                <div>
+                <div className="detailBody">
                     {book.volumeInfo.description}
                 </div>
             </div>
