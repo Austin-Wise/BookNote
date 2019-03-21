@@ -1,0 +1,80 @@
+.detail-view{
+    margin-bottom: 5rem;
+    grid-column-end: -1;
+    grid-column-start: -3;
+    grid-row-start: 1;
+    grid-row-end: 3;
+    border: 3px solid #2A5D73;
+    background: #fff;
+    border: 3px solid #2A5D73;
+    background: #fff;
+    align-self: start;
+}
+#no_book{
+    display: none; 
+ }
+
+.detail-head{
+    /* height: 140px; */
+    background: #2A5D73;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+.detail-head > div{
+    justify-content: start;
+}
+.detail-head > h3{
+    font-size: 2.4rem;
+    padding: 1rem 2rem .2rem .5rem;
+    color: #fff;
+}
+.isbn{
+    color: rgba(255, 255, 255, 0.74);
+    font-size: .8rem;
+    padding-right: .5rem;
+}
+.detail-d{
+    padding: 16px;
+    height: 100%-5rem;
+
+}
+.detail-body{
+    display: grid;
+    grid-gap: 1rem;
+}
+.detail-options{
+    display: grid;
+}
+.detail-author{
+    grid-area: 1 / 1 / 2 / 4;
+}
+.detail-category{
+    grid-area: 1 / 4 / 1 / 5;
+}
+.detail-pages{
+    grid-area: 2 / 4 / 2 / 5;
+}
+.detail-publisher{
+    grid-area: 2 / 1 / 2 / 4;
+}
+.detail-description{
+    grid-area: 3 / 1 / 6 / 5;
+    padding-bottom: 1rem;
+}
+.detail-options{
+    border-top: 2px solid #1C3D4B;
+    padding-top: .5rem;
+    display: grid;
+    align-self: end;
+}
+.button-google{
+    grid-area: 1 / 2 / 8 / 5;
+    justify-self: end;
+    text-decoration: none;
+    color: #1C3D4B;
+}
+.button-exit{
+    grid-area: 1 / 1 / 8 / 2;
+}

@@ -5,19 +5,15 @@ h1,h2,h3,h4,h5,p, .App{
 body{
     box-sizing: border-box;
     background-color: rgb(235, 235, 235);
-}
-.body-container{
-    padding-top: 3rem;
+    color: #1C3D4B;
 }
 .container{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2rem;
+    padding: 3rem 10%;
 }
+
 header{
-    width: 100%;
     margin: 0;
-    padding: 0;
+    padding: .5rem 10%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

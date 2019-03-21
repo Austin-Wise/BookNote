@@ -8,12 +8,12 @@ const BookListItem = ({ book, onBookSelect }) => {
         <div className="card">
             <div className="card-head">
                 <h3>{(book.volumeInfo.title).replace(/^(.{39}[^\s]*).*/, "$1")}</h3>
-                <h4>{book.volumeInfo.authors}</h4>
+                <h4>{book.volumeInfo.authors ? book.volumeInfo.authors : "[No Author Data Available]"}</h4>
             </div>
             <div className="card-content">
 
                 {/* {(imgUrl) ? (<img className="" src={imgUrl} alt={book.volumeInfo.title} />) : "NO IMG"} */}
-                <p>{(description) ? (description).replace(/^(.{200}[^\s]*).*/, "$1") : ""}</p>
+                <p>{(description) ? (description).replace(/^(.{200}[^\s]*).*/, "$1") : "[No Description Data Available]"}</p>
                 <button onClick={() => onBookSelect(book)}>More Info</button>
             </div>
         </div>
