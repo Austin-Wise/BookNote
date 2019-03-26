@@ -8,9 +8,14 @@ const BookDetail = ({ book, onBookSelect }) => {
     }//to cover async issues.
     // const bookId = book.id.bookId;
 
+    //For ternaries on ln.25, 26, 27, 27, check 'BookListItem.js' comments
+
+
+
     return (
         <div className="detail-view">
             <div className="detail-head">
+                {/* ln.19 cuts down the title to a reasonable size. also cuts at end of word */}
                 <h3>{(book.volumeInfo.title).replace(/^(.{39}[^\s]*).*/, "$1")}</h3>
                 <div><p className="isbn">ISBN: {book.volumeInfo.industryIdentifiers[0].identifier}</p></div>
             </div>
@@ -25,6 +30,7 @@ const BookDetail = ({ book, onBookSelect }) => {
                 <div className="detail-options">
                     {book.volumeInfo.previewLink ? (<a className="button-google" href={book.volumeInfo.previewLink} target="_blank">View in Books</a>) : ""}
                     <button aria-label="close" className="button-exit" onClick={() => onBookSelect(null)}>-</button>
+                    {/* Though  the button-exit shows only a ( - ) aria-lables allow for -some- readout for handicapable access.*/}
                 </div >
             </div>
         </div >
