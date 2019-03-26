@@ -19,7 +19,7 @@ const BookListItem = ({ book, onBookSelect }) => {
                 {/* blue bit on each card */}
                 <div className="card-head-titles">
                     <h3>{(book.volumeInfo.title).replace(/^(.{39}[^\s]*).*/, "$1")}</h3>
-                    <h4>{book.volumeInfo.authors ? book.volumeInfo.authors : ""}</h4>
+                    <h4>{book.volumeInfo.authors ? (book.volumeInfo.authors).replace(/^(.{48}[^\s]*).*/, "$1") : ""}</h4>
                 </div>
             </div>
             <div className="card-content">
