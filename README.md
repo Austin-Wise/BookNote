@@ -1,68 +1,40 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# BookNote
+[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://austin-wise.github.io/BookNote/#/)
 
-## Available Scripts
+#### Booknote is an online catalog purposed for finding your next favorite book!
 
-In the project directory, you can run:
+  - Type book title, author, or ISBN number in searchbar.
+  - Browse through publications matching the search criteria.
+  - Find the book you like!
 
-### `npm start`
+# Publication Card View
+  - Quick browse through up to 30 publications in a single view by title, 
+   author, and a short description.
+  - click the (+) button to view a detailed view of the selected publication.
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Publication Detail View 
+You can also:
+  - Detailed view of publication's Title, Description, Author, Page Count, Category,
+   Publication House and Date, as well as ISBN
+  - View Additional details by clicking the "Google Preview" button, redirecting to the
+   publication page within Google Books
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+## Tech
+Booknote uses a number of open source resources in order to work properly:
+- [React v16.0](https://reactjs.org/): Though the 404 page is routed to a seperate page, 
+    the majority of the application can be seen in a single view.
+- [Lodash](https://lodash.com/): utilized to allow for a more seamless experience when typing in the
+ search parameters.
+- [Axios](): used to handle AJAX request: 
+- API retrieved from [Google Books](https://developers.google.com/books/).
+- In order to optimize routing for Github Pages, [HashRouter](https://github.com/ReactTraining/react-router/blob/master/packages/react-router-dom/docs/api/HashRouter.md) was used in place of 
+ default methods within React-Router-DOM
+- Font Used: Google Roboto
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+### Installation
+Install the dependencies and devDependencies and start the server.
+```sh
+$ cd booknote
+$ yarn install
+$ yarn start
+```
