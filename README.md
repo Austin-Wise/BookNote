@@ -7,19 +7,19 @@
   - Browse through publications matching the search criteria.
   - Find the book you like!
 
-# Publication Card View
+## Publication Card View
   - Quick browse through up to 30 publications in a single view by title, 
    author, and a short description.
   - click the (+) button to view a detailed view of the selected publication.
 
-# Publication Detail View 
+## Publication Detail View 
 You can also:
   - Detailed view of publication's Title, Description, Author, Page Count, Category,
    Publication House and Date, as well as ISBN
   - View Additional details by clicking the "Google Preview" button, redirecting to the
    publication page within Google Books
 
-## Tech
+### Tech
 Booknote uses a number of open source resources in order to work properly:
 - [React v16.0](https://reactjs.org/): Though the 404 page is routed to a seperate page, 
     the majority of the application can be seen in a single view.
