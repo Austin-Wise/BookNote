@@ -7,14 +7,16 @@ const BookListItem = ({ book, onBookSelect }) => {
     return (
         <div className="card">
             <div className="card-head">
-                <h3>{(book.volumeInfo.title).replace(/^(.{39}[^\s]*).*/, "$1")}</h3>
-                <h4>{book.volumeInfo.authors ? book.volumeInfo.authors : "[No Author Data Available]"}</h4>
+                <div className="card-head-titles">
+                    <h3>{(book.volumeInfo.title).replace(/^(.{39}[^\s]*).*/, "$1")}</h3>
+                    <h4>{book.volumeInfo.authors ? book.volumeInfo.authors : ""}</h4>
+                </div>
             </div>
             <div className="card-content">
 
                 {/* {(imgUrl) ? (<img className="" src={imgUrl} alt={book.volumeInfo.title} />) : "NO IMG"} */}
-                <p>{(description) ? (description).replace(/^(.{200}[^\s]*).*/, "$1") : "[No Description Data Available]"}</p>
-                <button onClick={() => onBookSelect(book)}>More Info</button>
+                <p>{(description) ? (description).replace(/^(.{200}[^\s]*).*/, "$1") : "No Description"}</p>
+                <button aria-label="More Info" class="moreInfo" onClick={() => onBookSelect(book)}>+</button>
             </div>
         </div>
     );

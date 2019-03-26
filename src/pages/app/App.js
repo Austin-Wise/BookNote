@@ -6,7 +6,7 @@ import BookList from '../../components/book_list/BookList';
 
 import './Style.css';
 
-const urlForBook = 'https://www.googleapis.com/books/v1/volumes?q=';
+const urlForBook = 'https://www.googleapis.com/books/v1/volumes?&maxResults=30&q=';
 const bookKey = '&key=AIzaSyDvTrjRMZ6tgY_o1oUtEC4KhQUtDdjsLwA';
 
 class App extends React.Component {
@@ -49,10 +49,13 @@ class App extends React.Component {
     } else {
       return (
         <div className="App">
-          <SearchBar onSearchTermChange={bookSearch} />
+          <header>
+            <SearchBar onSearchTermChange={bookSearch} />
+            <h1 id="logo">BookNote</h1>
+          </header>
           <div className="appLoading">
 
-            <h2>Loading...</h2>
+            <img src="http://ajaxload.info/cache/EB/EB/EB/2A/5D/73/5-0.gif" alt="loading gif" />
 
           </div>
         </div >

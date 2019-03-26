@@ -8,7 +8,7 @@
     background: #fff;
     border: 3px solid #2A5D73;
     background: #fff;
-    align-self: start;
+    align-self: center;
 }
 #no_book{
     display: none; 
@@ -72,9 +72,19 @@
 .button-google{
     grid-area: 1 / 2 / 8 / 5;
     justify-self: end;
+    align-self: center;
     text-decoration: none;
     color: #1C3D4B;
 }
 .button-exit{
     grid-area: 1 / 1 / 8 / 2;
+    border-radius: 100px;
+    height: 30px;
+    width: 30px;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 10px;
+    background-color: #009688;
+    color: #fff;
+    border:none;
 }

@@ -5,17 +5,25 @@
 .card-head{
     /* height: 140px; */
     background: #2A5D73;
-    display: grid;
-    grid-template-rows: 6fr 1fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: baseline;
+    height: 104px;
+
 }
-.card-head > h3{
-    align-self: end;
+.card-head-titles{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+.card-head-titles > h3{
+    /* align-self: end; */
     font-size: 1.4rem;
-    padding: 1rem 2rem .2rem .5rem;
+    padding: 2rem 2rem .2rem .5rem;
     color: #fff;
 }
-.card-head > h4{
-    align-self: end;
+.card-head-titles > h4{
+    /* align-self: end; */
     font-size: 1rem;
     padding-left:.5rem;
     padding-bottom: .2rem;
@@ -34,5 +42,17 @@
 .card-content > button{
     margin-top: .1rem;
     align-self: end;
-    width: 40%;
+}
+
+.moreInfo{
+    border-radius: 100px;
+    height: 25px;
+    width: 25px;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 10px;
+    background-color: #009688;
+    color: #fff;
+    border:none;
+    text-indent: -1px; 
 }

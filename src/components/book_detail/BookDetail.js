@@ -16,15 +16,15 @@ const BookDetail = ({ book, onBookSelect }) => {
             </div>
             <div className="detail-d">
                 <div className="detail-body">
-                    <h4 className="detail-author">{book.volumeInfo.authors ? book.volumeInfo.authors : "[No Author Data]"}</h4>
-                    <p className="detail-category">{book.volumeInfo.categories ? book.volumeInfo.categories : "[No Category Data]"}</p>
-                    <p className="detail-pages">{book.volumeInfo.pageCount ? book.volumeInfo.pageCount + " Pages" : "[No Page Count Data]"}</p>
-                    <p className="detail-publisher">{(book.volumeInfo.publisher && book.volumeInfo.publishedDate) ? "Publisher: " + book.volumeInfo.publisher + ", " + book.volumeInfo.publishedDate : "[No Publisher Data]"}</p>
-                    <p className="detail-description">{book.volumeInfo.description ? book.volumeInfo.description : "[No Author Data]"}</p>
+                    <h4 className="detail-author">{book.volumeInfo.authors ? book.volumeInfo.authors : ""}</h4>
+                    <p className="detail-category">{book.volumeInfo.categories ? book.volumeInfo.categories : ""}</p>
+                    <p className="detail-pages">{book.volumeInfo.pageCount ? book.volumeInfo.pageCount + " Pages" : ""}</p>
+                    <p className="detail-publisher">{(book.volumeInfo.publisher && book.volumeInfo.publishedDate) ? "Publisher: " + book.volumeInfo.publisher + ", " + book.volumeInfo.publishedDate : ""}</p>
+                    <p className="detail-description">{book.volumeInfo.description ? book.volumeInfo.description : "No Description"}</p>
                 </div>
                 <div className="detail-options">
                     {book.volumeInfo.previewLink ? (<a className="button-google" href={book.volumeInfo.previewLink} target="_blank">View in Books</a>) : ""}
-                    <button className="button-exit" onClick={() => onBookSelect(null)}>Done</button>
+                    <button aria-label="close" className="button-exit" onClick={() => onBookSelect(null)}>-</button>
                 </div >
             </div>
         </div >
