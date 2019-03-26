@@ -16,7 +16,7 @@ self.__precacheManifest = [
     "url": "/BookNote/static/css/main.2821c109.chunk.css"
   },
   {
-    "revision": "522137540ec02c502b0da70f5980bd77",
+    "revision": "2ebc442b51e45027fa770025209668a9",
     "url": "/BookNote/index.html"
   }
 ];
