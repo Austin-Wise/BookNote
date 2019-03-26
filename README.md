@@ -29,7 +29,7 @@ Booknote uses a number of open source resources in order to work properly:
 - API retrieved from [Google Books](https://developers.google.com/books/).
 - In order to optimize routing for Github Pages, [HashRouter](https://github.com/ReactTraining/react-router/blob/master/packages/react-router-dom/docs/api/HashRouter.md) was used in place of 
  default methods within React-Router-DOM
-- Font Used: Google Roboto
+- Font Used: [Google Roboto](https://fonts.google.com/specimen/Roboto)
 
 ### Installation
 Install the dependencies and devDependencies and start the server.
