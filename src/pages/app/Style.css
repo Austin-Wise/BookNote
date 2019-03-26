@@ -25,9 +25,10 @@ header{
     width: 25%;
     max-width: 250px;
     min-width: 150px;
-    
-    
+    border-radius: 100px;
+    border: 2px solid #009688; 
 }
+input:focus {outline:none;}
 #logo{
     background: url("./booknote_logo.png") no-repeat;
     background-size: 100%;
