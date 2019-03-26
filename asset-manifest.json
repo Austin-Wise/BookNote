@@ -1,13 +1,13 @@
 {
-  "main.css": "/BookNote/static/css/main.3e6121d7.chunk.css",
-  "main.js": "/BookNote/static/js/main.49995a2a.chunk.js",
-  "main.js.map": "/BookNote/static/js/main.49995a2a.chunk.js.map",
+  "main.css": "/BookNote/static/css/main.6408cb88.chunk.css",
+  "main.js": "/BookNote/static/js/main.3eb69c8a.chunk.js",
+  "main.js.map": "/BookNote/static/js/main.3eb69c8a.chunk.js.map",
   "runtime~main.js": "/BookNote/static/js/runtime~main.0952fe7f.js",
   "runtime~main.js.map": "/BookNote/static/js/runtime~main.0952fe7f.js.map",
   "static/js/2.72c00e63.chunk.js": "/BookNote/static/js/2.72c00e63.chunk.js",
   "static/js/2.72c00e63.chunk.js.map": "/BookNote/static/js/2.72c00e63.chunk.js.map",
   "index.html": "/BookNote/index.html",
-  "precache-manifest.d48e60e34949e1412132ed02203e867e.js": "/BookNote/precache-manifest.d48e60e34949e1412132ed02203e867e.js",
+  "precache-manifest.69097817d8f0d15d812e3a5510ac7ffe.js": "/BookNote/precache-manifest.69097817d8f0d15d812e3a5510ac7ffe.js",
   "service-worker.js": "/BookNote/service-worker.js",
-  "static/css/main.3e6121d7.chunk.css.map": "/BookNote/static/css/main.3e6121d7.chunk.css.map"
+  "static/css/main.6408cb88.chunk.css.map": "/BookNote/static/css/main.6408cb88.chunk.css.map"
 }
