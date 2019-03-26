@@ -26,7 +26,7 @@ class App extends React.Component {
 
   search(term) {
     this.setState({ isLoaded: false });
-    if (term == "") { this.setState({ isLoaded: true }); }
+    if (term === "") { this.setState({ isLoaded: true }); }
     //This is a bit hacky, but to be accomodating to React's ridiculous -no if statements- in the render method tyrannical rule,
     //we are placing this here.  Essentially, if there isnt anything in the search bar, the call-to-action is displayed.
     //Alternative of only having if-elseif-else statements in the render resulted in longer load times, as well as out of sync loads.
@@ -51,7 +51,7 @@ class App extends React.Component {
   render() {
     const bookSearch = _.debounce((term) => { this.search(term) }, 1000)
     //Lodash has a timer argument, 1000 -> 1 second. After user types, lodash waits for 1 second to pass info to Axios
-    if (this.state.book.length == 0) {
+    if (this.state.book.length === 0) {
       //Again.. hacky stuff. Check ln. 29 for more details.
       //this return is for the Call to action
       return (

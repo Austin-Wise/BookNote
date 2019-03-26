@@ -28,7 +28,7 @@ const BookDetail = ({ book, onBookSelect }) => {
                     <p className="detail-description">{book.volumeInfo.description ? book.volumeInfo.description : "No Description"}</p>
                 </div>
                 <div className="detail-options">
-                    {book.volumeInfo.previewLink ? (<a className="button-google" href={book.volumeInfo.previewLink} target="_blank">View in Books</a>) : ""}
+                    {book.volumeInfo.previewLink ? (<a className="button-google" href={book.volumeInfo.previewLink} rel="noopener noreferrer" target="_blank">View in Books</a>) : ""}
                     <button aria-label="close" className="button-exit" onClick={() => onBookSelect(null)}>-</button>
                     {/* Though  the button-exit shows only a ( - ) aria-lables allow for -some- readout for handicapable access.*/}
                 </div >

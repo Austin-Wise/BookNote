@@ -75,6 +75,11 @@
     align-self: center;
     text-decoration: none;
     color: #1C3D4B;
+    text-indent:-9999px;
+    background: url(gbs_preview_button1.png) no-repeat;
+    background-size: contain;
+    height: 30px;
+    width: 90px;
 }
 .button-exit{
     grid-area: 1 / 1 / 8 / 2;
