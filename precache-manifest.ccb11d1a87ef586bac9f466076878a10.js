@@ -4,7 +4,7 @@ self.__precacheManifest = [
     "url": "/BookNote/static/js/runtime~main.0952fe7f.js"
   },
   {
-    "revision": "30da4cb894e9e7a26f56",
+    "revision": "159c4e5a79b950f26f0a",
     "url": "/BookNote/static/js/main.d663ab4f.chunk.js"
   },
   {
@@ -12,11 +12,11 @@ self.__precacheManifest = [
     "url": "/BookNote/static/js/2.a2146bd1.chunk.js"
   },
   {
-    "revision": "30da4cb894e9e7a26f56",
-    "url": "/BookNote/static/css/main.da6ba839.chunk.css"
+    "revision": "159c4e5a79b950f26f0a",
+    "url": "/BookNote/static/css/main.2821c109.chunk.css"
   },
   {
-    "revision": "c009606be50b55f1758f570818cec0b2",
+    "revision": "522137540ec02c502b0da70f5980bd77",
     "url": "/BookNote/index.html"
   }
 ];
